@@ -13,7 +13,7 @@ export default class MyPlugin extends Plugin {
 		this.registerHoverLinkSource('my-plugin', { // This is the source name that will be used as the "source" attribute in the hover-link event
 			display: 'My plugin',
 			defaultMod: false,
-		});
+		}); // you can see the list of all hover link sources in app.workspace.hoverLinkSources
 
 		this.registerDomEvent(document, 'mouseover', (event) => {
 			if (event.target instanceof HTMLElement && event.target.matches('.inline-title')) {
@@ -28,6 +28,6 @@ export default class MyPlugin extends Plugin {
 					});	
 				}
 			}
-		})
+		});
 	}
 }
